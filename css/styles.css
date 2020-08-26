@@ -1,0 +1,25 @@
+cur {
+	background-color: red; 
+}
+
+.aboutCollapsible {
+	background-color: #eee;
+	cursor: pointer;
+	text-align: left;
+  	outline: none;
+	padding: 10px;
+ 	width: 300px;
+}
+
+.active, .aboutCollapsible:hover {
+  background-color: #ccc;
+}
+
+
+.about {
+  padding: 0 18px;
+  background-color: #f1f1f1;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}

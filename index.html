@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Genaille–Lucas Rulers Visualiser</title>
+  <meta name="description" content="Genaille–Lucas Rulers Visualiser">
+  <meta name="James Harris" content="SitePoint">
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script type="text/javascript" src="js/ruler2.js"></script>
+  <script type="text/javascript" src="js/collapse.js"></script>
+
+</head>
+
+<body onload="collapseSetup()">
+
+
+<header>
+  <h1 id="heading">Genaille–Lucas Rulers Visualiser</h1>
+</header>
+
+
+<div>
+	<button type="button" class="aboutCollapsible">Open About</button>
+		<div class="about">
+			<p>Genaille–Lucas Rulers Visualiser by James Harris</p>
+			<p>This tool is a visulaiser made for Genaille–Lucas Rulers. For more information about these rulers see their <a href="https://en.wikipedia.org/wiki/Genaille–Lucas_rulers">wikipedia page</a></p>
+			<p>How to use: enter a number upto 15 digits into the text entry field and select a single non zero digit from</p>
+			<p>the drop down. Press solve to instantly display the answer on the rulers. Alternativley you can repeatedly click step solve to step through the solution.</p>
+			<p> The last option is to click slow solve, which will step through the solution for you.</p>
+		</div>
+</div>
+
+<div>
+	<label for="numberEntry">Enter:</label>
+	<input type="number" id="numberEntry" name="numberEntry" min="0" max="999999999999999">
+	
+
+	<label for="smallNumber">times by:</label>
+	<select name="smallNumber" id="smallNumber">
+	    <option value="1">1</option>
+	    <option value="2">2</option>
+	    <option value="3">3</option>
+	    <option value="4">4</option>
+	    <option value="5">5</option>
+	    <option value="6">6</option>
+	    <option value="7">7</option>
+	    <option value="8">8</option>
+	    <option value="9">9</option>
+  	</select>
+
+  	<button type="button" class="solveButton" onclick="solveAll()">Solve</button>
+
+	<button type="button" class="stepSolve" onclick="stepSolve()">Step Solve</button>
+
+	<button type="button" class="slowSolve" onclick="slowSolveAll()">Solve Slow</button>
+
+	<label for="outputField">Solution:</label>
+	<output name="outputField" id="outputField"></output>
+
+</div>
+<div>
+	<canvas id="Genaille–Lucas" width="1500" height="1055" style="border:1px solid #000000;"></canvas>
+</div>
+
+</body>
+</html>
